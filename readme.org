@@ -1,0 +1,79 @@
+#+title: Readme
+#+AUTHOR: Abdel Malik Najhi
+#+DESCRIPTION: Readme des Simulationsprogramm einer Prozessverwaltung eines Betriebssystems.
+#+OPTIONS: toc:2
+
+* Inhaltsverzeichnis :toc:
+- [[#installation][Installation]]
+  - [[#mit-cargo][mit Cargo]]
+  - [[#mit-der-binary][mit der Binary]]
+- [[#anwendung][Anwendung]]
+  - [[#aufrufen-des-programms][Aufrufen des Programms]]
+  - [[#argumente][Argumente]]
+  - [[#beispiele][Beispiele]]
+
+* Installation
+Zur Installation gibt es zwei Möglichkeiten. Entweder klont man das Repository und führt das Programm mit Cargo aus oder man lädt die Binary Datei herunter und legt sie entweder in Ein Verzeichnis, das der Shell als Verzeichnis für Executables bebkannt ist oder man gibt zur Ausführung den Pfad der Binärdatei an.
+** mit Cargo
+*** Dependencies
+- Git
+- Cargo
+
+Git ist wahrscheinlich bereits auf Ihrem System installiert. Cargo wird meistens in Rust mitgeliefert. Rust kann über den Packetmanager Ihrer Unix-Distribution installiert werden oder über [[rustup.rs]]
+*** Anleitung
+Folgende Anweisungen sind möglicherweise Unix-spezifisch
+Stelle sicher, dass Git und Cargo installiert sind.
+#+begin_src bash
+git --version
+cargo --version
+#+end_src
+
+Anschließend klonen Sie die Repository in eines von Ihnen bevorzugten Verzeichnissen.
+#+begin_src bash
+git clone #Git-URL
+#+end_src
+** mit der Binary
+*** Dependencies
+- Rust
+
+*** Anleitung
+
+
+
+
+* Anwendung
+Die Verwendung findet im Terminal statt. Zur Vorbereitung müssen die Prozesse in eine CSV Datei geschrieben werden analog zu diesem [[./examples/input/Beispiel1.csv][Beispiel]].
+An dem Ort, wo das Programm ausgeführt wird, wird ein Verzeichnis mit dem Namen Output erstellt falls noch nicht vorhanden. Dort wird eine Org-Datei abgelegt, die einen Überblick über die Simulation gibt.
+** Aufrufen des Programms
+Zur Aufrufung des Programms gibt es drei Möglichkeiten je nach Installation. Entweder befindet man sich im Verzeichnis des Cargo Projekts so ruft man das Programm folgendermaßen auf:
+#+begin_src bash
+cargo run #weitere Argumente
+#+end_src
+
+Falls sich die Binary im Pfad der Shell befindet:
+#+begin_src bash
+prozessverwaltung #weitere Argumente
+#+end_src
+
+Ansomsten so:
+#+begin_src bash
+/Pfad/zur/Binary/prozessverwaltung #weitere Argumente
+#+end_src
+** Argumente
+Das erste Argument ist der Pfad zur CSV-Datei. In dieser Datei werden die Prozesse mit Namen, ID, Ankunftszeit und Bearbeitungszeit beschrieben. Beispieldateien befinden sich in [[./examples/input][examples/input]]. Ohne einen Verweis auf eine CSV Datei wird das Programm nicht ausgeführt.
+
+Das zweite Argument ist der Scheduling-Algorithmus. Ohne das Setzen eines Algorithmus wird das Programm nicht ausgeführt.
+Mehrere Ausdrücke können für das Bestimmen des Algorithmus benutzt werden. Eine einfache Lösung sind die Zahlen 1 bis 4.
+1 für First Come First Serve; 2 für Round Robin; 3 für Non-preemptive Shortest Job First; 4 für Preemptive Shortest Job First
+
+Weitere Argumente sind optional weil diese Werte setzen für die es Defaults gibt.
+
+Mit dem dritten Argument setzt man die Umschaltzeit, also die Menge an Zeiteinheiten, die vergehen wenn der Prozess gewechselt wird, außer für den Round Robin Algorithmus. Der default Wert ist 0.
+Für Round Robin (RR) setzt man mit dem dritten Argument die Menge an Zeiteinheiten die ein Prozess auf einmal mximal bearbeitet wird. Der Default ist 3. Die Umschaltzeit wird mit dem vierten Argument gesetzt.
+** Beispiele
+Folgendermaßen können Verwendungen im Terminal aussehen:
+
+In diesem Fall wird Round Robin ausgeführt mit einer Umschaltzeit von von 2 Zeiteinheiten:
+#+begin_src bash
+cargo run input/Beispiel1.csv 1 2
+#+end_src
