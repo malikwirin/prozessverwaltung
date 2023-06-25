@@ -3,7 +3,7 @@ name = "prozessverwaltung"
 version = "0.1.0"
 edition = "2021"
 authors = ["Abdel Malik Najhi"]
-license = "GPL-2.0-or-later"
+license = "GPL-3.0-or-later"
 
 
 [[bin]]
