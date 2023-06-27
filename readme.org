@@ -38,9 +38,8 @@ git clone https://github.com/malikwirin/prozessverwaltung.git
 - Rust
 
 *** Anleitung
-
-
-
+Laden Sie die Binary mithilfe eines Webrowsers auf auf der [[https://github.com/malikwirin/prozessverwaltung/releases][Releasepage]] herunter.
+Legen Sie die Binary in das gewünschte Verzeichnis und machen es falls notwendig ausführbar.
 
 * Anwendung
 Die Verwendung findet im Terminal statt. Zur Vorbereitung müssen die Prozesse in eine CSV Datei geschrieben werden analog zu diesem [[./examples/input/Beispiel1.csv][Beispiel]].
