@@ -1,0 +1,17 @@
+* This is the output of the scheduler simulation.
+** About the scheduling processing method
+The simulation used the Round Robin (RR) scheduling algorithm.
+Switching processes costs 0 time units.
+The Round Robin algorithm processes every process up to 3 time units at a time.
+** Averages
+The average waiting time for the processes is 28.
+The average turnaround time for the processes is 62.57143.
+The average reaction time for the processes is 1.
+** Processes
+Process: Prozess1 (ID: 0), Arrival Time: 0, Execution Time: 150, Start: 0, End: 241, Waiting Time: 92, Turnaround Time: 242, Reaction Time 0
+Process: Prozess3 (ID: 2), Arrival Time: 2, Execution Time: 22, Start: 3, End: 55, Waiting Time: 32, Turnaround Time: 54, Reaction Time 1
+Process: Prozess5 (ID: 4), Arrival Time: 6, Execution Time: 8, Start: 6, End: 25, Waiting Time: 12, Turnaround Time: 20, Reaction Time 0
+Process: Prozess7 (ID: 6), Arrival Time: 30, Execution Time: 2, Start: 32, End: 33, Waiting Time: 2, Turnaround Time: 4, Reaction Time 2
+Process: Prozess2 (ID: 1), Arrival Time: 55, Execution Time: 7, Start: 56, End: 68, Waiting Time: 7, Turnaround Time: 14, Reaction Time 1
+Process: Prozess4 (ID: 3), Arrival Time: 66, Execution Time: 33, Start: 69, End: 131, Waiting Time: 33, Turnaround Time: 66, Reaction Time 3
+Process: Prozess6 (ID: 5), Arrival Time: 150, Execution Time: 20, Start: 150, End: 187, Waiting Time: 18, Turnaround Time: 38, Reaction Time 0

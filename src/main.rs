@@ -17,7 +17,7 @@ fn main() -> Result<(), Box<dyn std::error::Error + 'static>> {
 
     // Überprüfen, ob genügend Argumente übergeben wurden
     if args.len() < 3 {
-        panic!("Bitte geben Sie den Pfad zur CSV-Datei, den Namen des Scheduling-Verfahrens an, und die Menge an Zeiteinheiten falls Round Robin.");
+        panic!("Bitte geben Sie den Pfad zur CSV-Datei, den Namen des Scheduling-Verfahrens an. Für weitere Informationen schauen Sie in die Readme.");
     }
     
     let mut switch_time: u32 = 0;
@@ -231,7 +231,6 @@ fn main() -> Result<(), Box<dyn std::error::Error + 'static>> {
             processes = sort_processes_by_execution_time(processes);
             let mut time: u32 = 0;
             let mut current: usize = 0;
-            let mut last_process: usize = amount as usize;
             println!("Preemptive Shortest Job First");
             while !all_processes_completed {
                 processes = sort_processes_by_execution_time_left(processes);
@@ -242,16 +241,24 @@ fn main() -> Result<(), Box<dyn std::error::Error + 'static>> {
 
                 if processes[current].process(&time) {
                     time += 1;
-                    last_process = current;
-                    
-                    current = 0;
-                } else if processes_currently_available(&processes, &time) {
-                    if last_process == current {
+                    let mut new_process: bool = false;
+
+                    for i in 0..current {
+                        let process = &processes[i];
+                        if !process.completed && process.arrival_time <= time {
+                        // debug println!("Der Prozess {} ist verfügbar", process.name);
+                        new_process = true;
+                        }
+                    }
+                    if new_process || processes[current].completed {
                         time += switch_time;
                     }
+                    current = 0;
+                } else if processes_currently_available(&processes, &time) {
                     current += 1;
                 } else if !processes_currently_available(&processes, &time) {
                     time += 1;
+                    current = 0;
                 }
                 
                 //es wird geprüft ob alle Prozesse durch sind

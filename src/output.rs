@@ -10,10 +10,10 @@ use crate::process::Process;
 pub fn output(processes: &Vec<Process>, scheduling_algorithm: &str, switch_time: &u32, time_units: &u32) -> Result<(), Box<dyn std::error::Error + 'static>> {
     // Erstellen des Dateinamens mit Datum und Uhrzeit
     let timestamp = Local::now().format("%Y-%m-%d_%H-%M-%S");
-    let filename = format!("Output/output_{}.org", timestamp);
+    let filename = format!("output/output_{}.org", timestamp);
 
     // Erstellen des Verzeichnisses, falls es nicht existiert
-    fs::create_dir_all("Output")?;
+    fs::create_dir_all("output")?;
 
     // Öffnen der Datei im Schreibmodus
     let mut file = File::create(Path::new(&filename))?;

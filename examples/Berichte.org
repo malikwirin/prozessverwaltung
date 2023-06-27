@@ -1,0 +1,51 @@
++title: Bericht
+#+Author: Abdel Malik Najhi
+#+DESCRIPTION: Hier werden verschieden Herangehensweisen an das Programm und verscheidener Algorithmen analysiert.
+
+* Vorweg
+Die CSV-Dateien, welche als Inputs verwendet werden findet man im Ordner [[./input][examples/input]].
+Wenn das Programm nur mit den beiden Argumenten für die CSV-Datei und für den Algorithmus verwendet wird werden die default Werte verwendet. Für die Umschaltzeit ist das 0 und für die Menge an Zeiteinheiten die in Round Robin pro Prozess verwendet wird ist das 3.
+* Versuche
+** 1. Versuch
+Beim ersten Versuch wenden wir den First Come, First Serve Algorithmus auf die [[./input/Beispiel1.csv][Beispiel1.csv]] Datei an.
+#+begin_src bash
+cargo run examples/input/Beispiel1.csv 1
+#+end_src
+Das Ergebnis lässt sich in [[./output/ersterVersuch.org][hier]] nachlesen.
+** 2. Versuch 
+Beim zweiten Versuch wenden wir den Round Robin Algorithmus auf die [[./input/Beispiel2.csv][Beispiel2.csv]] Datei an.
+#+begin_src bash
+cargo run examples/input/Beispiel2.csv 2
+#+end_src
+Das Ergebnis lässt sich [[./output/zweiterVersuch.org][hier]] nachlesen.
+** 3. Versuch 
+Beim dritten Versuch wenden wir Non-preemptive Shortest Job First Algorithmus auf die [[./input/Beispiel2.csv][Beispiel2.csv]] Datei an.
+#+begin_src bash
+cargo run examples/input/Beispiel2.csv 3
+#+end_src
+Das Ergebnis lässt sich [[./output/dritterVersuch.org][hier]] nachlesen.
+** 4. Versuch 
+Beim vierten Versuch wenden wir den Preemptive Shortest Job First Algorithmus auf die [[./input/Beispiel2.csv][Beispiel2.csv]] Datei an.
+#+begin_src bash
+cargo run examples/input/Beispiel2.csv 4
+#+end_src
+Das Ergebnis lässt hier [[./output/vierterVersuch.org][hier]] nachlesen.
+** 5. Versuch 
+Beim fünften Verusch wenden wir den Round Robin Algorithmus an aber setzen die Zeit pro Prozess auf 7 und die Umschaltzeit auf 2. Wieder mit [[./input/Beispiel2.csv][Beispiel2.csv]].
+#+begin_src bash
+cargo run examples/input/Beispiel2.csv 2 7 2
+#+end_src
+Das Ergebnis lässt sich [[./output/fünfterVersuch.org][hier]] nachlesen.
+** 6. Versuch 
+Beim sechsten Versuch wenden wir den Non-preemptive Shortest Job First Algorithmus auf die [[./input/Beispiel1.csv][Beispiel1.csv]] Datei mit einer Umschaltzeit von 2 an.
+#+begin_src bash
+cargo run examples/input/Beispiel1.csv 3 2
+#+end_src
+Das Ergebnis kann man [[./output/sechsterVersuch.org][hier]] nachlesen.
+** 7. Versuch
+Beim siebten Versuch wenden wir den Preemptive Shortest Job First Algorithmus auf die [[./input/Beispiel1.csv][Beispiel1.csv]] Datei mit einer Umschaltzeit von 10 an.
+#+begin_src bash
+cargo run examples/input/Beispiel1.csv 4 10
+#+end_src
+Das Ergebnis kann [[./output/siebterVersuch.org][hier]] nachgelesen werden.
+* Fazit

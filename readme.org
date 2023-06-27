@@ -11,6 +11,7 @@
   - [[#aufrufen-des-programms][Aufrufen des Programms]]
   - [[#argumente][Argumente]]
   - [[#beispiele][Beispiele]]
+- [[#berichte][Berichte]]
 
 * Installation
 Zur Installation gibt es zwei Möglichkeiten. Entweder klont man das Repository und führt das Programm mit Cargo aus oder man lädt die Binary Datei herunter und legt sie entweder in Ein Verzeichnis, das der Shell als Verzeichnis für Executables bebkannt ist oder man gibt zur Ausführung den Pfad der Binärdatei an.
@@ -21,7 +22,7 @@ Zur Installation gibt es zwei Möglichkeiten. Entweder klont man das Repository 
 
 Git ist wahrscheinlich bereits auf Ihrem System installiert. Cargo wird meistens in Rust mitgeliefert. Rust kann über den Packetmanager Ihrer Unix-Distribution installiert werden oder über [[rustup.rs]]
 *** Anleitung
-Folgende Anweisungen sind möglicherweise Unix-spezifisch
+Folgende Anweisungen sind möglicherweise Unix-spezifisch.
 Stelle sicher, dass Git und Cargo installiert sind.
 #+begin_src bash
 git --version
@@ -30,7 +31,7 @@ cargo --version
 
 Anschließend klonen Sie die Repository in eines von Ihnen bevorzugten Verzeichnissen.
 #+begin_src bash
-git clone #Git-URL
+git clone https://github.com/malikwirin/prozessverwaltung.git
 #+end_src
 ** mit der Binary
 *** Dependencies
@@ -43,7 +44,7 @@ git clone #Git-URL
 
 * Anwendung
 Die Verwendung findet im Terminal statt. Zur Vorbereitung müssen die Prozesse in eine CSV Datei geschrieben werden analog zu diesem [[./examples/input/Beispiel1.csv][Beispiel]].
-An dem Ort, wo das Programm ausgeführt wird, wird ein Verzeichnis mit dem Namen Output erstellt falls noch nicht vorhanden. Dort wird eine Org-Datei abgelegt, die einen Überblick über die Simulation gibt.
+An dem Ort, wo das Programm ausgeführt wird, wird ein Verzeichnis mit dem Namen output erstellt falls noch nicht vorhanden. Dort wird eine Org-Datei abgelegt, die einen Überblick über die Simulation gibt.
 ** Aufrufen des Programms
 Zur Aufrufung des Programms gibt es drei Möglichkeiten je nach Installation. Entweder befindet man sich im Verzeichnis des Cargo Projekts so ruft man das Programm folgendermaßen auf:
 #+begin_src bash
@@ -55,7 +56,7 @@ Falls sich die Binary im Pfad der Shell befindet:
 prozessverwaltung #weitere Argumente
 #+end_src
 
-Ansomsten so:
+Ansonsten so:
 #+begin_src bash
 /Pfad/zur/Binary/prozessverwaltung #weitere Argumente
 #+end_src
@@ -77,3 +78,6 @@ In diesem Fall wird Round Robin ausgeführt mit einer Umschaltzeit von von 2 Zei
 #+begin_src bash
 cargo run input/Beispiel1.csv 1 2
 #+end_src
+
+* Berichte
+Einen Vergleich zwischen verscheidenen Herangehensweisen finden Sie [[./examples/Berichte.org][hier]].

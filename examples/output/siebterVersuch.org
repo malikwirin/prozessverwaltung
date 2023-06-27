@@ -1,0 +1,14 @@
+* This is the output of the scheduler simulation.
+** About the scheduling processing method
+The simulation used the Preemptive Shortest Job First scheduling algorithm.
+Switching processes costs 10 time units.
+** Averages
+The average waiting time for the processes is 35.8.
+The average turnaround time for the processes is 42.8.
+The average reaction time for the processes is 28.8.
+** Processes
+Process: P3 (ID: 2), Arrival Time: 3, Execution Time: 1, Start: 13, End: 13, Waiting Time: 10, Turnaround Time: 11, Reaction Time 10
+Process: P4 (ID: 3), Arrival Time: 6, Execution Time: 4, Start: 24, End: 27, Waiting Time: 18, Turnaround Time: 22, Reaction Time 18
+Process: P2 (ID: 1), Arrival Time: 0, Execution Time: 7, Start: 0, End: 41, Waiting Time: 35, Turnaround Time: 42, Reaction Time 0
+Process: P5 (ID: 4), Arrival Time: 6, Execution Time: 8, Start: 52, End: 59, Waiting Time: 46, Turnaround Time: 54, Reaction Time 46
+Process: P1 (ID: 0), Arrival Time: 0, Execution Time: 15, Start: 70, End: 84, Waiting Time: 70, Turnaround Time: 85, Reaction Time 70
