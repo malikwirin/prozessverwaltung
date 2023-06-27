@@ -2,6 +2,18 @@
 #+Author: Abdel Malik Najhi
 #+DESCRIPTION: Hier werden verschieden Herangehensweisen an das Programm und verscheidener Algorithmen analysiert.
 
+* Inhaltsverzeichnis :toc:
+- [[#vorweg][Vorweg]]
+- [[#versuche][Versuche]]
+  - [[#1-versuch][1. Versuch]]
+  - [[#2-versuch][2. Versuch]]
+  - [[#3-versuch][3. Versuch]]
+  - [[#4-versuch][4. Versuch]]
+  - [[#5-versuch][5. Versuch]]
+  - [[#6-versuch][6. Versuch]]
+  - [[#7-versuch][7. Versuch]]
+- [[#fazit][Fazit]]
+
 * Vorweg
 Die CSV-Dateien, welche als Inputs verwendet werden findet man im Ordner [[./input][examples/input]].
 Wenn das Programm nur mit den beiden Argumenten für die CSV-Datei und für den Algorithmus verwendet wird werden die default Werte verwendet. Für die Umschaltzeit ist das 0 und für die Menge an Zeiteinheiten die in Round Robin pro Prozess verwendet wird ist das 3.

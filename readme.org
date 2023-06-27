@@ -76,7 +76,7 @@ Folgendermaßen können Verwendungen im Terminal aussehen:
 
 In diesem Fall wird Round Robin ausgeführt mit einer Umschaltzeit von von 2 Zeiteinheiten:
 #+begin_src bash
-cargo run input/Beispiel1.csv 1 2
+cargo run examples/input/Beispiel1.csv 1 2
 #+end_src
 
 * Berichte
