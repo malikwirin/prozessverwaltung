@@ -17,6 +17,7 @@
 * Vorweg
 Die CSV-Dateien, welche als Inputs verwendet werden findet man im Ordner [[./input][examples/input]].
 Wenn das Programm nur mit den beiden Argumenten für die CSV-Datei und für den Algorithmus verwendet wird werden die default Werte verwendet. Für die Umschaltzeit ist das 0 und für die Menge an Zeiteinheiten die in Round Robin pro Prozess verwendet wird ist das 3.
+
 * Versuche
 ** 1. Versuch
 Beim ersten Versuch wenden wir den First Come, First Serve Algorithmus auf die [[./input/Beispiel1.csv][Beispiel1.csv]] Datei an.
@@ -60,4 +61,6 @@ Beim siebten Versuch wenden wir den Preemptive Shortest Job First Algorithmus au
 cargo run examples/input/Beispiel1.csv 4 10
 #+end_src
 Das Ergebnis kann [[./output/siebterVersuch.org][hier]] nachgelesen werden.
+
 * Fazit
+Ein optimales Verfahren für jeden Kontext gibt es nicht. Jedoch kann man durch die Auseinandersetzung mit den Algorithmen, ihrer Simulation und dem Testen mithilfe der Simulation viel darüber lernen worauf es beim Kontext ankommt. Für alle Prozesse insgesammt könnte man beim ersten Eindruck denken, der Algorithmus ist bei gleichbleibender Umschaltzeit irrelevant. Schlielich beginnen die Prozesse zur gleichen Zeit und alle Prozesse sind auch nach gleicher Zeit fertig. Jedoch kann man an den Durchschnitten erkennen, dass die Algorithmen große Unterschiede für die einzelnen Prozesse bedeuten, welche im realen Kontext auch nicht alle gleich wichtig sind. So gibt der Non-Preemptiv Shortest Job First Algorithmus besonders schlechte Durchschnittswerte während die Variante mit Unterbrechung besonders gute Durchschnittswerte gibt. Diese beiden Algorithmen vernachlässigen aber besonders lang dauernde Prozesse. Dieses Problem haben First Come First Serve und Round Robin nicht. Round Robin kann aber sehr viele Unterbrechungen benötigen, was bei einer höheren Umschaltzeit sehr nachteilig ist. First Come First Serve ist dafür sehr gut nachvollziebar und macht das System vorhersehbar. Nach meinem Wissen ändert sich bei aktuellen Betriebssystemen der Scheduling Algorithmus je nach Situation dynamisch. Sogar Rückmeldungen des Prozessors können berücksichtigt werden. Wenn ich mich bei einem primitiven Betriebssystem für einen Algorithmus entscheiden müsste wäre es wahrscheinlich Round Robin, es sei denn die Umschaltzeit kann nicht niedrig genug gehalten werden. Dann wohl First Come First Serve.
