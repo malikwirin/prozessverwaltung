@@ -11,6 +11,7 @@
   - [[#aufrufen-des-programms][Aufrufen des Programms]]
   - [[#argumente][Argumente]]
   - [[#beispiele][Beispiele]]
+  - [[#ergebnisse][Ergebnisse]]
 - [[#berichte][Berichte]]
 
 * Installation
@@ -37,7 +38,7 @@ git clone https://github.com/malikwirin/prozessverwaltung.git
 Aktuell nur für 64 Bit Linux. Ansonsten keine Dependencies.
 
 *** Anleitung
-Laden Sie die Binary mithilfe eines Webrowsers auf auf der [[https://github.com/malikwirin/prozessverwaltung/releases][Releasepage]] herunter.
+Laden Sie die Binary mithilfe eines Webrowsers auf der [[https://github.com/malikwirin/prozessverwaltung/releases][Releasepage]] herunter.
 Legen Sie die Binary in das gewünschte Verzeichnis und machen es falls notwendig ausführbar.
 
 * Anwendung
@@ -76,6 +77,8 @@ In diesem Fall wird Round Robin ausgeführt mit einer Umschaltzeit von von 2 Zei
 #+begin_src bash
 cargo run examples/input/Beispiel1.csv 1 2
 #+end_src
-
+** Ergebnisse
+Die Ergebnisse können in einer Org-Datei im Verzeichniss output angesehen werden. Diese Datei trägt das Datum und die Uhrzeit zum Zeitpunkt der Simulation. 
+Zur Betrachtung von Org-Dateien empfehle ich [[https://www.gnu.org/software/emacs/][GNU Emacs]].
 * Berichte
 Einen Vergleich zwischen verscheidenen Herangehensweisen finden Sie [[./examples/Berichte.org][hier]].
