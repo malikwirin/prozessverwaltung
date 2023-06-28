@@ -20,7 +20,7 @@ Zur Installation gibt es zwei Möglichkeiten. Entweder klont man das Repository 
 - Git
 - Cargo
 
-Git ist wahrscheinlich bereits auf Ihrem System installiert. Cargo wird meistens in Rust mitgeliefert. Rust kann über den Packetmanager Ihrer Unix-Distribution installiert werden oder über [[rustup.rs]]
+Git ist wahrscheinlich bereits auf Ihrem System installiert. Cargo wird meistens in Rust mitgeliefert. Rust kann über den Packetmanager Ihrer Unix-Distribution installiert werden oder über [[rustup.rs]].
 *** Anleitung
 Folgende Anweisungen sind möglicherweise Unix-spezifisch.
 Stelle sicher, dass Git und Cargo installiert sind.
