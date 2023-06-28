@@ -34,8 +34,7 @@ Anschließend klonen Sie die Repository in eines von Ihnen bevorzugten Verzeichn
 git clone https://github.com/malikwirin/prozessverwaltung.git
 #+end_src
 ** mit der Binary
-*** Dependencies
-- Rust
+Aktuell nur für 64 Bit Linux. Ansonsten keine Dependencies.
 
 *** Anleitung
 Laden Sie die Binary mithilfe eines Webrowsers auf auf der [[https://github.com/malikwirin/prozessverwaltung/releases][Releasepage]] herunter.
