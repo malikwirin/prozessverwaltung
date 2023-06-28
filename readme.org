@@ -14,7 +14,7 @@
 - [[#berichte][Berichte]]
 
 * Installation
-Zur Installation gibt es zwei Möglichkeiten. Entweder klont man das Repository und führt das Programm mit Cargo aus oder man lädt die Binary Datei herunter und legt sie entweder in Ein Verzeichnis, das der Shell als Verzeichnis für Executables bebkannt ist oder man gibt zur Ausführung den Pfad der Binärdatei an.
+Zur Installation gibt es zwei Möglichkeiten. Entweder klont man das Repository und führt das Programm mit Cargo aus oder man lädt die Binary Datei herunter und legt sie entweder in ein Verzeichnis, das der Shell als Verzeichnis für Executables bekannt ist oder man gibt zur Ausführung den Pfad der Binärdatei an.
 ** mit Cargo
 *** Dependencies
 - Git
